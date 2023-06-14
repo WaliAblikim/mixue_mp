@@ -1,0 +1,7 @@
+package-lock.json
+node_modules/
+miniprogram_npm/
+.DS_Store
+.cloudbase/
+project.private.config.json
+*.js

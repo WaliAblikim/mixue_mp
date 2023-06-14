@@ -1,13 +1,44 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/store/index",
+    "pages/order/index",
+    "pages/me/index"
   ],
+  "tabBar": {
+      "custom": true,
+      "list": [{
+          "pagePath": "pages/index/index",
+          "text": "首页",
+          "iconPath": "./assets/images/tabBar/homeonSelected.png",
+          "selectedIconPath": "./assets/images/tabBar/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/store/index",
+        "text": "点餐",
+        "iconPath": "./assets/images/tabBar/storeOnSelected.png",
+        "selectedIconPath": "./assets/images/tabBar/storeSelected.png"
+    },   {
+        "pagePath": "pages/order/index",
+        "text": "订单",
+        "iconPath": "./assets/images/tabBar/orderOnselected.png",
+        "selectedIconPath": "./assets/images/tabBar/orderSelected.png"
+    },
+    {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "./assets/images/tabBar/meOnSelected.png",
+        "selectedIconPath": "./assets/images/tabBar/meSelected.png"
+    }
+    ]
+  },
+   
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
