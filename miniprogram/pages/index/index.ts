@@ -1,3 +1,6 @@
+import pageApi from "../../api/page"
+
+
 // pages/index/index.ts
 Page({
 
@@ -5,14 +8,19 @@ Page({
      * Page initial data
      */
     data: {
+        swiperList:<SwiperData[]>[]
 
     },
 
     /**
      * Lifecycle function--Called when page load
      */
-    onLoad() {
-
+    async onLoad() {
+        const {swiper} = await pageApi.home()
+        this.setData({
+            swiperList:swiper
+        })
+ 
     },
 
     /**
@@ -26,6 +34,7 @@ Page({
      * Lifecycle function--Called when page show
      */
     onShow() {
+        this.getTabBar().init() 
 
     },
 
