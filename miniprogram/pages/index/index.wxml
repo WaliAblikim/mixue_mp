@@ -7,14 +7,27 @@
 <text class="title">微雪花会员</text>
 <text class="description">再升1级可享【升级礼包】等6项权益</text>
 </view>
-<view class="vip-card__coin">
+<view style="display: none;" class="vip-card__coin">
 <text>187</text>
 <text class="coin">雪王币</text>
 </view>
-<view class="vip-card__coupon">
+<view style="display: none;" class="vip-card__coupon">
 <text>0</text>
 <text class="coupon">优惠卷</text>
 </view>
- </view>
+<view class="vip-card__button">
+<van-button type="primary" size="small">授权登录</van-button>
+</view>
+</view>
+<view class="menu-card">
+<view class="menu-card__pickup">
+<image src="../../assets/images/ziqu.png"></image>
+</view>
+<view class="menu-card__takeaway">
+<image src="../../assets/images/waimai.png"></image>
+</view>
+</view>
+
+
 </view>
 

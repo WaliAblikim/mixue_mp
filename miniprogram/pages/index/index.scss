@@ -60,4 +60,26 @@
         }
 
     }
-} 
+}
+
+.menu-card{
+    @include cardStyle();
+ 
+    width: 706rpx;
+    height: 350rpx;
+    margin-top: 24rpx;
+    display: flex;
+    overflow: hidden;
+    &__pickup{
+        width: 340rpx;
+        height: 350rpx;
+        overflow: hidden;
+    }
+    &__takeaway{
+        width: 370rpx;
+        height: 350rpx;
+        overflow: hidden;
+        margin-left: 20rpx;
+        border-radius: 20rpx;
+    }
+}

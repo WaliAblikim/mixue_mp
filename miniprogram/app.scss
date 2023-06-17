@@ -7,6 +7,11 @@ view{
     --tabbar-height:90rpx;
     --tabbar-item-text-color:var(--text-color); 
     --tabbar-item-active-color:var(--primary-color);
+
+    //vant button
+    --button-primary-background-color: var(--primary-color);
+    --button-primary-border-color: var(--primary-color);
+    --button-border-radius: 14rpx;
     //reset
     box-sizing: border-box;
 }
