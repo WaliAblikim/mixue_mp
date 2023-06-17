@@ -1,0 +1,63 @@
+@import '../styles/mixin.scss';
+.vip-card{
+    z-index: 1;
+    margin-top: -80rpx;
+    width: 706rpx;
+    height: 176rpx;
+    overflow: hidden;
+    @include cardStyle();
+    display: flex;
+    align-items: center;
+    gap:22rpx;
+    padding: 0 24rpx;
+    &__left-icon{
+        width: 75rpx;
+        height: 75rpx;
+    }
+    &__meta{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .title{
+            font-weight: bold;
+            font-size: 29rpx;
+        }
+        .description{
+            font-size: 22rpx;
+            color: #c0c0c0;
+            margin-top: 16rpx;
+        }
+    }
+    &__coin{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .coin{
+            font-size: 24rpx;
+            color: #c0c0c0;
+            margin-top: 16rpx;
+        }
+        text{
+            font-weight: bold;
+            font-size: 35rpx;
+            
+        }
+    }
+    &__coupon{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .coupon{
+            font-size: 24rpx;
+            color: #c0c0c0;
+            margin-top: 16rpx;
+        }
+        text{
+            font-weight: bold;
+            font-size: 35rpx;
+            
+        }
+
+    }
+} 
