@@ -1,4 +1,5 @@
 import pageApi from "../../api/page"
+import navigator from "../../utilis/navigator"
 
 
 // pages/index/index.ts
@@ -8,7 +9,8 @@ Page({
      * Page initial data
      */
     data: {
-        swiperList:<SwiperData[]>[]
+        swiperList:<SwiperData[]>[],
+        IconNavigations: <IconNavigation[]>[]
 
     },
 
@@ -16,60 +18,23 @@ Page({
      * Lifecycle function--Called when page load
      */
     async onLoad() {
-        const {swiper} = await pageApi.home()
+        const {swiper,iconNavigations} = await pageApi.home()
         this.setData({
-            swiperList:swiper
+            swiperList:swiper,
+            IconNavigations:iconNavigations
         })
- 
     },
-
-    /**
-     * Lifecycle function--Called when page is initially rendered
-     */
-    onReady() {
-
+    onIconNavigationTab(event:ItemParam){
+        const {type, target} = event.currentTarget.dataset.item
+        navigator.to(type,target)
     },
-
-    /**
-     * Lifecycle function--Called when page show
-     */
-    onShow() {
-        this.getTabBar().init() 
-
+    goToLogin(){
+        wx.navigateTo({url:'/pages/login/index'})
     },
-
-    /**
-     * Lifecycle function--Called when page hide
-     */
-    onHide() {
-
+    onPickup(){
+        wx.switchTab({url:'/pages/store/index'})
     },
-
-    /**
-     * Lifecycle function--Called when page unload
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * Page event handler function--Called when user drop down
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * Called when page reach bottom
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * Called when user click on the top right corner to share
-     */
-    onShareAppMessage() {
-
+    onTakeaway(){
+        wx.navigateTo({url:'/pages/login/index'})
     }
 })

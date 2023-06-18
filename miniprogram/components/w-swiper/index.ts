@@ -1,3 +1,5 @@
+import navigator from "../../utilis/navigator"
+
 // components/w-swiper/index.ts
 Component({
     /**
@@ -27,8 +29,10 @@ Component({
             this.setData({
                 current:event.detail.current
             })
+        },
+        onItemTab(event:ItemParam){
+            const currentItem = event.currentTarget.dataset.item
+            navigator.to(currentItem.type, currentItem.target)
         }
-
-
     }
 })

@@ -16,18 +16,19 @@
 <text class="coupon">优惠卷</text>
 </view>
 <view class="vip-card__button">
-<van-button type="primary" size="small">授权登录</van-button>
+<van-button type="primary" size="small" bindtap="goToLogin" >授权登录</van-button>
 </view>
 </view>
 <view class="menu-card">
 <view class="menu-card__pickup">
-<image src="../../assets/images/ziqu.png"></image>
+<image src="../../assets/images/ziqu.png" bindtap="onPickup"></image>
 </view>
 <view class="menu-card__takeaway">
-<image src="../../assets/images/waimai.png"></image>
+<image src="../../assets/images/waimai.png" bindtap="onTakeaway"></image>
 </view>
 </view>
-
-
+<view class="icon-navigations">
+<image class="icon-navigations__item" wx:for="{{IconNavigations}}" wx:key="unique" src="{{item.image}}" bindtap="onIconNavigationTab" data-item="{{item}}" ></image>
+</view>
 </view>
 

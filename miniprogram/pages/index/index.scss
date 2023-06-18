@@ -1,7 +1,7 @@
 @import '../styles/mixin.scss';
 .vip-card{
     z-index: 1;
-    margin-top: -80rpx;
+    margin-top: -60rpx;
     width: 706rpx;
     height: 176rpx;
     overflow: hidden;
@@ -63,17 +63,16 @@
 }
 
 .menu-card{
-    @include cardStyle();
- 
     width: 706rpx;
     height: 350rpx;
-    margin-top: 24rpx;
+    margin-top: 35rpx;
     display: flex;
     overflow: hidden;
     &__pickup{
         width: 340rpx;
         height: 350rpx;
         overflow: hidden;
+        border-radius: 20rpx;
     }
     &__takeaway{
         width: 370rpx;
@@ -81,5 +80,16 @@
         overflow: hidden;
         margin-left: 20rpx;
         border-radius: 20rpx;
+    }
+}
+.icon-navigations{
+    width: 706rpx;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40rpx;
+    &__item{
+        @include cardStyle();
+        width: 220rpx;
+        height: 190rpx;
     }
 }

@@ -1,7 +1,8 @@
 import request from "./requist"
 
 type HomePageData =  {
-    swiper: SwiperData[]
+    swiper: SwiperData[],
+    iconNavigations: IconNavigation[]
 }
 const home =()=>{
     return request<HomePageData> ('GET','/page/home')

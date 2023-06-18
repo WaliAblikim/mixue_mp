@@ -24,7 +24,9 @@
         "useCompilerPlugins": [
             "typescript",
             "sass"
-        ]
+        ],
+        "es6": true,
+        "enhance": true
     },
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
