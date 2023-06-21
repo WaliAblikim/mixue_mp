@@ -26,7 +26,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "蜜雪冰城",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh":true,
     "navigationStyle": "custom"
