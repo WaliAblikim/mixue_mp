@@ -1,14 +1,11 @@
-type RequestMethod = "GET" | "POST"
 const BASE_URL = 'https://mock.apifox.cn/m1/1646135-0-default'
-type ErrorResponse = {
-    code:number,
-    message:string,
-}
 
-const request = <T>(method:RequestMethod,uri:string) : Promise<T> =>{
+const request = <T>(method:RequestMethod,uri:string,data?:RequestData) : Promise<T> =>{
 return new Promise((resolve, reject)=>{
     wx.request({
         method,
+        data,
+        
         url:BASE_URL+uri,
         success:(response)=>{
             response.statusCode !==200 && reject(response.data as ErrorResponse)
