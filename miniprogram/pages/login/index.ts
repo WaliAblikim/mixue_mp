@@ -1,12 +1,10 @@
-import tokenApi from "../../api/token"
+import { storeBehavior } from "../../behavior/storeBehavior"
 
 // pages/login/index.ts
 Page({
+    behaviors:[storeBehavior],
     data: {
     },
-    login (event:{detail:{code:string}}) {
-        tokenApi.create(event.detail.code)
-      },
       cancel(){
           wx.navigateBack()
       }

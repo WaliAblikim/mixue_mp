@@ -1,13 +1,13 @@
 import pageApi from "../../api/page"
 import navigator from "../../utilis/navigator"
+import { storeBehavior } from "../../behavior/storeBehavior"
+
 
 
 // pages/index/index.ts
 Page({
 
-    /**
-     * Page initial data
-     */
+    behaviors:[storeBehavior],
     data: {
         swiperList:<SwiperData[]>[],
         IconNavigations: <IconNavigation[]>[]

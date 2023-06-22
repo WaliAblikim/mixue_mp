@@ -7,15 +7,15 @@
 <text class="title">微雪花会员</text>
 <text class="description">再升1级可享【升级礼包】等6项权益</text>
 </view>
-<view style="display: none;" class="vip-card__coin">
+<view wx:if="{{app.token}}" class="vip-card__coin">
 <text>187</text>
 <text class="coin">雪王币</text>
 </view>
-<view style="display: none;" class="vip-card__coupon">
+<view wx:if="{{app.token}}" class="vip-card__coupon">
 <text>0</text>
 <text class="coupon">优惠卷</text>
 </view>
-<view class="vip-card__button">
+<view wx:if="{{!app.token}}" class="vip-card__button">
 <van-button type="primary" size="small" bindtap="goToLogin" >授权登录</van-button>
 </view>
 </view>
