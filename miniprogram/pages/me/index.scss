@@ -1,1 +1,65 @@
 /* pages/me/index.wxss */
+.page{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom,#fbe7e6,30%,#f8f8f8 50%);
+    padding: 0 30rpx;
+    .user-section{
+        width: 100%;
+        padding: 24rpx 0;
+        display: flex;
+        align-items: center;
+        &__avatar{
+            width: 120rpx;
+            height: 120rpx;
+        }
+        &__info{
+            flex:1;
+            margin-left: 22rpx;
+            font-size: 26rpx;
+        }
+    }
+    .info-card-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .info-card{
+            width: 332rpx;
+            padding: 20rpx 24rpx;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20rpx;
+            &__number{
+                font-weight: bold;
+                font-size: 20rpx;
+            }
+            &__unit{
+                font-size: 24rpx;
+                color: var(--text-color);
+            }
+            &__icon{
+                width: 72rpx;
+                height: 72rpx;
+            }
+        }
+    }
+    .menu-section{
+        margin-top: 20rpx;
+        width: 100%;
+        border-radius: 20rpx;
+        &__icon{
+            width: 50rpx;
+            height: 50rpx;
+            margin-right: 26rpx;
+        }
+    }
+    .version{
+        font-size: 24rpx;
+        margin-top: 20rpx;
+        color: var(--text-color);
+
+    }
+
+}

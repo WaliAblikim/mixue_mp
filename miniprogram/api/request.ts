@@ -5,7 +5,6 @@ return new Promise((resolve, reject)=>{
     wx.request({
         method,
         data,
-        
         url:BASE_URL+uri,
         success:(response)=>{
             response.statusCode !==200 && reject(response.data as ErrorResponse)
