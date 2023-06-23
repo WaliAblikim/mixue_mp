@@ -17,7 +17,7 @@
         </van-field>
         <van-field label="生日">
             <picker slot="input" mode="date" value="{{app.currentUser.birthDay}}" bindchange="bindDateChange">
-                <view class="pop-tips"  wx:if="{{!app.currentUser}}">(仅支持修改一次)</view>
+                <view class="warning-info"  wx:if="{{!app.currentUser}}">(仅支持修改一次)</view>
                 <view class="picker" wx:if="{{app.currentUser.birthDay}}">
                     {{app.currentUser.birthDay}}
                 </view>
