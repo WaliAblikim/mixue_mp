@@ -11,3 +11,11 @@ type ErrorResponse = {
 }
 
 type RequestData = string | WechatMiniprogram.IAnyObject | ArrayBuffer
+
+
+type UserType = {
+    id:string,
+    mobile:number,
+    gender?:'MALE'|'FEMALE'|'UNKNOWN'|number,
+    brithday:string;
+}

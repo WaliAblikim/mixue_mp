@@ -1,12 +1,16 @@
 import { observable, action } from "mobx-miniprogram";
 import tokenApi from "../api/token";
-const STORAGE_KEY = 'token'
+import userApi from "../api/user";
+const TOKEN_STORAGE_KEY = 'token'
+const CURRENT_USER_STORAGE_KEY = 'current-user'
 export const appStore = observable({
- token:wx.getStorageSync(STORAGE_KEY),
+ token:<string>wx.getStorageSync(TOKEN_STORAGE_KEY),
+ currentUser:<UserType|null>wx.getStorageSync(CURRENT_USER_STORAGE_KEY),
  login:action(async function(event:{detail:{code:string}}){
      //调用接口
      const token = await tokenApi.create(event.detail.code)
      appStore.setToken(token)
+     appStore.fetchCurrentUser()
      wx.showToast({
          title:'登录成功',
          icon:'success'
@@ -17,6 +21,20 @@ export const appStore = observable({
  }),
  setToken: action(function(token:string){
     appStore.token=token
-    wx.setStorageSync(STORAGE_KEY,token)
+    wx.setStorageSync(TOKEN_STORAGE_KEY,token)
+ }),
+ fetchCurrentUser: action(async function(){
+     const currentUser = await userApi.current()
+     appStore.setCurrentUser(currentUser)
+ }),
+ setCurrentUser: action(function(currentUser:UserType){
+     appStore.currentUser = currentUser
+     wx.setStorageSync(CURRENT_USER_STORAGE_KEY,currentUser)
+ }),
+ logout:action(function(){
+     appStore.token= ''
+     appStore.currentUser=null
+     wx.setStorageSync(TOKEN_STORAGE_KEY,'')
+     wx.setStorageSync(CURRENT_USER_STORAGE_KEY,null)
  })
 })
