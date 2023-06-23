@@ -6,6 +6,9 @@ Page({
     },
     login (event:{detail:{code:string}}) {
         tokenApi.create(event.detail.code)
+      },
+      cancel(){
+          wx.navigateBack()
       }
     
 })

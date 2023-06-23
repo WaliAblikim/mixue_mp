@@ -1,67 +1,25 @@
-// pages/me/index.ts
+
 Page({
-
-    /**
-     * Page initial data
-     */
     data: {
+        paddingTop:0,
+        menuList:[
+            {title:"兑换码"},
+            {title:"隐私服务"},
+            {title:"用户服务协议"},
+            {title:"经营信息公示"},
+            {title:"问题反馈"},
+            {title:"加盟咨询"},
 
+        ]
     },
-
-    /**
-     * Lifecycle function--Called when page load
-     */
-    onLoad() {
-
+    onLoad(){
+        const {bottom} = wx.getMenuButtonBoundingClientRect()
+        this.setData({
+            paddingTop:bottom
+        });
     },
-
-    /**
-     * Lifecycle function--Called when page is initially rendered
-     */
-    onReady() {
-
-    },
-
-    /**
-     * Lifecycle function--Called when page show
-     */
-    onShow() {
-        this.getTabBar().init() 
-
-    },
-
-    /**
-     * Lifecycle function--Called when page hide
-     */
-    onHide() {
-
-    },
-
-    /**
-     * Lifecycle function--Called when page unload
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * Page event handler function--Called when user drop down
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * Called when page reach bottom
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * Called when user click on the top right corner to share
-     */
-    onShareAppMessage() {
-
+    login(){
+        wx.navigateTo({url:'/pages/login/index'})
     }
+
 })

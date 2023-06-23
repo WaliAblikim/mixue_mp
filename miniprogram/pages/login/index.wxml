@@ -7,5 +7,5 @@
 <view class="login-btn">
 <van-button type="primary" open-type="getPhoneNumber" bindgetphonenumber="login" block>一键登录</van-button>
 </view>
-<view class="cancel">取消</view>
+<view class="cancel" bindtap="cancel">取消</view>
 </view>
