@@ -6,6 +6,7 @@ const CURRENT_USER_STORAGE_KEY = 'current-user'
 export const appStore = observable({
  token:<string>wx.getStorageSync(TOKEN_STORAGE_KEY),
  currentUser:<UserType|null>wx.getStorageSync(CURRENT_USER_STORAGE_KEY),
+ activeTabbar:0,
  login:action(async function(event:{detail:{code:string}}){
      //调用接口
      const token = await tokenApi.create(event.detail.code)
@@ -36,5 +37,8 @@ export const appStore = observable({
      appStore.currentUser=null
      wx.setStorageSync(TOKEN_STORAGE_KEY,'')
      wx.setStorageSync(CURRENT_USER_STORAGE_KEY,null)
+ }),
+ switchTabbar:action(function(value:number){
+     appStore.activeTabbar=value
  })
 })

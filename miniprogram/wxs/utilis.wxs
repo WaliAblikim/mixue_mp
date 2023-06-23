@@ -1,0 +1,8 @@
+var desentisize = function(value){
+    value = '' + value
+    return value.substring(0,3) + '******' + value.substring(9)
+}
+
+module.exports = {
+    desentisize:desentisize
+}

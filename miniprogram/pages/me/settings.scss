@@ -1,0 +1,37 @@
+.page {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  .header-section {
+    width: 100%;
+    padding: 85rpx 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 20rpx;
+    image {
+      width: 200rpx;
+      height: 200rpx;
+    }
+  }
+  .form-section {
+    width: 100%;
+    margin-bottom: 300rpx;
+    .pop-tips{
+        color: var(--text-color);
+    }
+    .tips {
+      color: var(--text-color);
+      font-size: 24rpx;
+      padding: 20rpx 35rpx 80rpx 35rpx;
+    }
+    .save-btn {
+      padding: 0 35rpx;
+    }
+  }
+}
+.logout {
+  color: var(--text-color);
+  font-size: 30rpx;
+}

@@ -1,5 +1,7 @@
+import { storeBehavior } from "../../behavior/storeBehavior";
 
 Page({
+    behaviors:[storeBehavior],
     data: {
         paddingTop:0,
         menuList:[
@@ -20,6 +22,9 @@ Page({
     },
     login(){
         wx.navigateTo({url:'/pages/login/index'})
+    },
+    goToSettings(){
+        wx.navigateTo({url:'/pages/me/settings'})
     }
 
 })
