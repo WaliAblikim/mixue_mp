@@ -1,7 +1,10 @@
+import { storeBehavior } from "../behavior/storeBehavior";
 import { ErrorMessage } from "../enums/ErrorMessage"
+import { appStore } from "../store/index";
 
 // custon-tab-bar/index.ts
 Component({
+    behaviors:[storeBehavior],
     data: {
         active:0,
         list:[{
@@ -32,14 +35,13 @@ Component({
     },
     methods: {
         onChange(event:{detail:number}){
-            this.setData({
-                active:event.detail
-            })
+            appStore.switchTabbar(event.detail)
             wx.switchTab({
                 url:this.data.list[event.detail].path
             });
         },
-        //初始化 tabbar 组件
+        //初始化 tabbar 
+        //To Do: 优化
         init (){
             const currentPage = getCurrentPages().pop()
             if(!currentPage){
@@ -50,10 +52,6 @@ Component({
                     active: this.data.list.findIndex(item=>item.path === `/${currentPage.route}`)
                 }
             )
-
-
         }
-
-
     }
 })

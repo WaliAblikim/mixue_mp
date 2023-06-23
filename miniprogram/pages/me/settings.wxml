@@ -1,0 +1,34 @@
+<!--pages/me/settings.wxml-->
+<wxs src="../../wxs/utilis.wxs" module="utilis" />
+<view class="page">
+    <view class="header-section">
+        <image src="../../assets/images/logo_login.png"></image>
+    </view>
+    <view class="form-section">
+        <van-field label="手机">
+            <van-button slot="button" size="small" plain hairline type="primary">修改</van-button>
+            <view class="input" slot="input">{{utilis.desentisize(app.currentUser.mobile)}}</view>
+        </van-field>
+        <van-field label="性别">
+            <van-radio-group slot="input" direction="horizontal">
+                <van-radio name="MALE">男</van-radio>
+                <van-radio name="FEMALE">女</van-radio>
+            </van-radio-group>
+        </van-field>
+        <van-field label="生日">
+            <picker slot="input" mode="date" value="{{app.currentUser.birthDay}}" bindchange="bindDateChange">
+                <view class="tips" wx:if="{{!app.currentUser.birthDay}}">(仅支持修改一次)</view>
+                <view class="picker" wx:if="{{app.currentUser.birthDay}}">
+                    {{app.currentUser.birthDay}}
+                </view>
+            </picker>
+        </van-field>
+        <view class="tips">
+            根据未成年人保护相关法律法规的要求，我们不主动处理14周岁以下未成年人的个人信息。如果您为14周岁以下的用户，请勿填写您的个人资料。
+        </view>
+        <view class="save-btn">
+            <van-button type="primary" block>保存</van-button>
+        </view>
+    </view>
+    <view class="logout">退出登录</view>
+</view>
