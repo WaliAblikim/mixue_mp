@@ -1,4 +1,4 @@
-type RequestMethod = "GET" | "POST"
+type RequestMethod = "GET" | "POST" | "PUT"
 
 type HomePageData =  {
     swiper: SwiperData[],
@@ -16,6 +16,13 @@ type RequestData = string | WechatMiniprogram.IAnyObject | ArrayBuffer
 type UserType = {
     id:string,
     mobile:number,
-    gender?:'MALE'|'FEMALE'|'UNKNOWN'|number,
-    brithday:string;
+    gender?:Gender,
+    birthDay?:string,
+}
+type Gender = 'MALE'|'FEMALE'|'UNKNOWN'|number
+
+type userUpdateRequest = {
+    mobile?:number,
+    gender?:Gender,
+    birthDay?:string,
 }
