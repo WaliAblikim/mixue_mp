@@ -1,5 +1,6 @@
 import { observable, action } from "mobx-miniprogram";
 import tokenApi from "../api/token";
+import { UserType,userUpdateRequest } from "../api/types";
 import userApi from "../api/user";
 const TOKEN_STORAGE_KEY = "token";
 const CURRENT_USER_STORAGE_KEY = "current-user";
@@ -46,7 +47,7 @@ export const appStore = observable({
   updateCurrentUser: action(async function (
     userUpdateRequest: userUpdateRequest
   ) {
-    const updatedUser = await userApi.updateCurrentUser(userUpdateRequest);
+    const updatedUser = await userApi.updateCurrent(userUpdateRequest);
     appStore.setCurrentUser(updatedUser);
   }),
 });
