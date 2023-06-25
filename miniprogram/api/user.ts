@@ -1,14 +1,15 @@
-import request from "./request"
+import request from "./request";
+import { UserType,userUpdateRequest } from "./types";
 
-const current = () =>{
-    return request<UserType>('GET','/users/current')
-}
+const current = () => {
+  return request<UserType>("GET", "/users/current");
+};
 
-const updateCurrentUser = (userUpdateRequest:userUpdateRequest) =>{
-    return request<UserType>('PUT','/users/current')
-} 
+const updateCurrent = (userUpdateRequest: userUpdateRequest) => {
+  return request<UserType>("PUT", "/users/current");
+};
 
 export default {
-    current,
-    updateCurrentUser
-}
+  current,
+  updateCurrent,
+};

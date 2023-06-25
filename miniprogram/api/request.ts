@@ -1,4 +1,5 @@
 import { appStore } from "../store/index"
+import { ErrorResponse, RequestData, RequestMethod } from "./types";
 
 const BASE_URL = 'https://mock.apifox.cn/m1/1646135-0-default'
 const TOKEN_PREFIX = 'BEARER ';
