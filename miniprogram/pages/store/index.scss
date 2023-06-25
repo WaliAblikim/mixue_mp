@@ -37,7 +37,6 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 20rpx;
-
       .store-card__meta {
         flex: 1;
         .name {
@@ -49,10 +48,20 @@
           color: var(--text-color);
           padding: 10rpx 0;
         }
-        .address {
-          font-size: 24rpx;
-          color: var(--text-color);
-          padding: 10rpx 0;
+        .current-address {
+          display: flex;
+          align-items: center;
+          .address {
+            font-size: 24rpx;
+            color: var(--text-color);
+            padding-left: 15rpx;
+          }
+          .distance {
+            font-size: 24rpx;
+            color: var(--text-color);
+            padding-right: 15rpx;
+            border-right: 0.5rpx solid #787878;
+          }
         }
       }
       &__actions {
