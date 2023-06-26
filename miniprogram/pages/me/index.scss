@@ -12,6 +12,7 @@
         &__avatar{
             width: 120rpx;
             height: 120rpx;
+            border-radius: 50%;
         }
         &__info{
             flex:1;
@@ -53,6 +54,7 @@
             width: 50rpx;
             height: 50rpx;
             margin-right: 26rpx;
+            border-radius: 50%;
         }
     }
     .version{

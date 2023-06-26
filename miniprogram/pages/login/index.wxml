@@ -1,6 +1,6 @@
 <!--pages/login/index.wxml-->
 <view class="page">
-    <image src="../../assets/images/logo.png" class="logo"></image>
+    <image src="../../assets/images/logo.jpeg" class="logo"></image>
     <view class="mark">蜜雪冰城</view>
     <view class="intro">成为会员，立享更多优惠福利</view>
     <view class="tips">授权绑定手机号 为您提供更好地服务</view>
