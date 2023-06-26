@@ -7,7 +7,7 @@
         <van-search custom-class="search" value="{{ value }}" placeholder="搜索门店" shape="round" />
     </view>
     <view class="map-section">
-        <map class="map"></map>
+        <map class="map" show-location></map>
         <view class="toggle-map">收起地区
             <van-icon style="margin-left: 10rpx;" name="arrow-up" />
         </view>
@@ -31,5 +31,6 @@
                 </view>
             </view>
         </view>
+        <van-loading custom-class="loading" wx:if="{{! storeList.length}}" vertical type="spinner">加载中</van-loading>
     </view>
 </view>

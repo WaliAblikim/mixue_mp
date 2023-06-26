@@ -25,6 +25,9 @@
             }
         ]
     },
+    "usingComponents": {
+        "van-loading": "@vant/weapp/loading/index"
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
